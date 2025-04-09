@@ -215,10 +215,15 @@ export function GradesTable({ detailed = false, validation = false }: GradesTabl
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem onClick={() => setFilterUE(null)}>Toutes les UE</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setFilterUE(null)}>
+                    Toutes les UE
+                  </DropdownMenuItem>
                   {ueList.map((ue) => (
-                      <DropdownMenuItem key={String(ue)} onClick={() => setFilterUE(ue)}>
-                        {ue}
+                      <DropdownMenuItem
+                          key={String(ue)}
+                          onClick={() => setFilterUE(String(ue))}
+                      >
+                        {String(ue)}
                       </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -232,10 +237,15 @@ export function GradesTable({ detailed = false, validation = false }: GradesTabl
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem onClick={() => setFilterModule(null)}>Tous les modules</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setFilterModule(null)}>
+                    Tous les modules
+                  </DropdownMenuItem>
                   {moduleList.map((module) => (
-                      <DropdownMenuItem key={String(module)} onClick={() => setFilterModule(module)}>
-                        {module}
+                      <DropdownMenuItem
+                          key={String(module)}
+                          onClick={() => setFilterModule(String(module))}
+                      >
+                        {String(module)}
                       </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
