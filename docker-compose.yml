@@ -1,0 +1,9 @@
+services:
+  adi-track:
+    container_name : 'ADI-Track'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3209:3000"

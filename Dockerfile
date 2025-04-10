@@ -1,44 +1,55 @@
-# Stage 1: Build stage
-FROM node:20-alpine AS builder
-
+# Stage 1: Dependencies
+FROM node:20-alpine AS deps
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package.json package-lock.json* ./
-RUN npm ci
+# Copier les fichiers de dépendances selon le gestionnaire de paquet utilisé
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+RUN \
+  if [ -f yarn.lock ]; then yarn install --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-# Copy source code
+# Stage 2: Build de l'application
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+# Copier les dépendances depuis l'étape précédente
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build the application
-RUN npm run build
-
-# Stage 2: Production stage
-FROM node:20-alpine AS runner
-
-WORKDIR /app
-
-# Set to production environment
+# Variables d'environnement pour le build
+ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
 
-# Create a non-root user to run the application
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
+# Construction de l'application (Next.js)
+RUN npm run build
 
-# Copy necessary files from the build stage
+# Stage 3: Image de production
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+# Variables d'environnement pour la production
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Création d'un utilisateur non-root pour exécuter l'application
+RUN addgroup --system --gid 1001 appgroup && \
+    adduser --system --uid 1001 --ingroup appgroup appuser
+
+# Copier les fichiers nécessaires depuis l'étape de build
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/next.config.mjs ./
+COPY --from=builder /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/.next ./.next
 
-# Set proper permissions
-RUN chown -R nextjs:nodejs /app
+# Passage à l'utilisateur non-root
+USER appuser
 
-# Switch to non-root user
-USER nextjs
-
-# Expose the port the app will run on
+# Exposer le port d'exécution de l'application
 EXPOSE 3000
 
-# Define the command to run the app
+# Démarrer l'application
 CMD ["npm", "start"]

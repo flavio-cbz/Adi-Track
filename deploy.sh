@@ -1,49 +1,42 @@
 #!/bin/bash
 set -e
 
-# Configuration
-APP_NAME="adi-track"
-PORT=3000
-
-# Colors for output
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-
-# Check if .env file exists
-if [ ! -f ".env" ]; then
-    echo -e "${YELLOW}Warning: .env file not found. Creating an empty one.${NC}"
-    touch .env
-fi
-
-# Build the Docker image
-echo -e "${GREEN}Building Docker image...${NC}"
-docker build -t $APP_NAME:latest .
-
-# Create or update the container
-echo -e "${GREEN}Deploying container...${NC}"
-if docker ps -a | grep -q $APP_NAME; then
-    echo -e "${YELLOW}Stopping and removing existing container...${NC}"
-    docker stop $APP_NAME || true
-    docker rm $APP_NAME || true
-fi
-
-echo -e "${GREEN}Creating new container...${NC}"
-docker run -d \
-    --name $APP_NAME \
-    --restart unless-stopped \
-    -p $PORT:3000 \
-    --env-file .env \
-    $APP_NAME:latest
-
-# Check if deployment was successful
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}Deployment successful!${NC}"
-    echo -e "${GREEN}Application is running at http://localhost:$PORT${NC}"
-else
-    echo -e "${RED}Deployment failed!${NC}"
+# Check if Docker is installed
+if ! command -v docker &> /dev/null; then
+    echo "Error: Docker is not installed."
     exit 1
 fi
 
-echo -e "${GREEN}Deployment process completed!${NC}"
+# Check if Docker Compose is installed
+if ! command -v docker-compose &> /dev/null; then
+    echo "Error: Docker Compose is not installed."
+    exit 1
+fi
+
+# Environment setup
+ENV=${1:-production}
+echo "Deploying in $ENV environment"
+
+# Create .env file if it doesn't exist
+if [ ! -f ".env" ]; then
+    echo "Creating .env file..."
+    cat > .env << EOL
+NODE_ENV=${ENV}
+PORT=3000
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=$(openssl rand -base64 32)
+EOL
+    echo ".env file created"
+fi
+
+# Build and start containers
+echo "Building and starting containers..."
+docker-compose build
+docker-compose up -d
+
+echo "Deployment completed!"
+echo "Application is running at http://localhost:${PORT:-3000}"
+
+# Show logs
+echo "Showing logs (press Ctrl+C to exit):"
+docker-compose logs -f

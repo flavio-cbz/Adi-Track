@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.github
+.vscode
+README.md
+.env.local
+.env.development
+.env.production
+.dockerignore
+Dockerfile
+deploy.sh
