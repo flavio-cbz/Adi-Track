@@ -5,85 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ed3f6a-8e80-428d-b096-17259da26b08" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/components/about-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/publish/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/grades/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/validation/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/login/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/register/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/profile/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/settings/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/assessment-type-coefficients.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/assessment-type-info.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/login-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/register-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard-header-client.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard-header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/data-verification.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/file-upload.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/grade-coefficient-explainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/grade-coefficient-explainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/grade-modification-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/grades-table.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/grades/grade-input-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/grades/grade-input-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/grades/grades-tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/grades/grades-tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/grades/results-tab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/grades/results-tab.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/manual-grade-input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/optimized-image.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/semester-summary.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settings/assessment-settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settings/display-settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settings/export-settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settings/notification-settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settings/user-settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/student-overview.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ue-progress.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/accordion.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/alert-dialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/aspect-ratio.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/avatar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/breadcrumb.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/calendar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/carousel.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/chart.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/checkbox.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/collapsible.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/command.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/context-menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/drawer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/hover-card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/menubar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/navigation-menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/pagination.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/popover.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/radio-group.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/resizable.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/scroll-area.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/separator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/sheet.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/sidebar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/skeleton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/slider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/textarea.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/toast.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/toaster.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/toggle-group.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/toggle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/use-mobile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/use-toast.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/use-mobile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data-transformer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/file-parser.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/grades-processor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mock-data.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pdf-export.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stores/assessment-type-store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stores/grades-store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/dynamic-import.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,12 +41,12 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="00d871d7-78d7-4567-ad17-074ddc42f0d0" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/flavio-cbz/Adi-Track.git",
-    "accountId": "c6750f07-1a6f-43a5-b6fc-c999f5941570"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/flavio-cbz/Adi-Track.git&quot;,
+    &quot;accountId&quot;: &quot;c6750f07-1a6f-43a5-b6fc-c999f5941570&quot;
   }
-}]]></component>
+}</component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -144,11 +68,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "Z:/home/flavio/Adi-Track",
+    "last_opened_file_path": "Z:/home/flavio/Projets/Logistix",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -193,7 +118,8 @@
       <workItem from="1744217637321" duration="263000" />
       <workItem from="1744217912746" duration="445000" />
       <workItem from="1744220709826" duration="2119000" />
-      <workItem from="1744290307092" duration="7927000" />
+      <workItem from="1744290307092" duration="8464000" />
+      <workItem from="1744303268030" duration="1312000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />

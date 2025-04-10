@@ -227,8 +227,7 @@ export default function AboutPage() {
                     <CardContent className="space-y-4">
                         <div className="text-sm space-y-2">
                             <p>
-                                ADI-Track est une application conçue pour les étudiants du programme ADI (Architecture des Données et
-                                Ingénierie) de JUNIA. Elle permet de suivre, calculer et vérifier les moyennes selon les règles
+                                ADI-Track est une application conçue pour les étudiants du programme ADIMAKER de JUNIA. Elle permet de suivre, calculer et vérifier les moyennes selon les règles
                                 spécifiques du programme.
                             </p>
 
